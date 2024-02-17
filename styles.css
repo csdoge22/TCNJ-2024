@@ -1,0 +1,146 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f5f5f5;
+  }
+  
+  .container {
+    display: flex;
+  }
+  
+  .vending-machine,
+  .cart-container {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    padding: 20px;
+    width: 300px; /* Adjust width as needed */
+    margin: 20px;
+  }
+  
+  h2 {
+    color: #333;
+  }
+  
+  .slot {
+    position: relative;
+    width: 100px;
+    height: 100px;
+    background-color: #ddd;
+    margin: 10px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    font-weight: bold;
+    font-size: 16px;
+  }
+  
+  .slot:hover {
+    background-color: #c0c0c0;
+  }
+  
+  .delete-button {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    background-color: #e74c3c;
+    color: #fff;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 3px;
+    font-size: 12px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .delete-button:hover {
+    background-color: #c0392b;
+  }
+  
+  #output {
+    margin-top: 20px;
+    font-size: 18px;
+    color: #555;
+  }
+  
+  #reset-button,
+  #clear-cart,
+  #view-cart,
+  #back-to-machine {
+    text-decoration: none;
+    background-color: #3498db;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: background-color 0.3s;
+    display: inline-block;
+  }
+  
+  #reset-button:hover,
+  #clear-cart:hover,
+  #view-cart:hover,
+  #back-to-machine:hover {
+    background-color: #2980b9;
+  }
+  
+  #cart-container {
+    text-align: left;
+  }
+  
+  #cart-items {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .cart-item {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .cart-item img {
+    width: 50px;
+    height: 50px;
+    border-radius: 5px;
+    margin-right: 10px;
+  }
+  
+  .delete-button-cart {
+    position: absolute;
+    top: 50%;
+    right: 5px;
+    transform: translateY(-50%);
+    background-color: #e74c3c;
+    color: #fff;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 3px;
+    font-size: 12px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .delete-button-cart:hover {
+    background-color: #c0392b;
+  }
+  
+  .hidden {
+    display: none;
+  }
+  
