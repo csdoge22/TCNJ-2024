@@ -10,11 +10,17 @@
 
 <div class="container">
   <div class="vending-machine">
-    <h2>ReVend</h2>
-    <div class="slot" id="plastic" onclick="insertItem('Plastic', 'images/pwb.jpg', 'Recyclable plastic items.')">Plastic</div>
-    <div class="slot" id="glass" onclick="insertItem('Glass', 'images/glass.jpg', 'Recyclable glass items.')">Glass</div>
-    <div class="slot" id="metal" onclick="insertItem('Metal', 'images/metal.jpg', 'Recyclable metal items.')">Metal</div>
-    <div class="slot" id="paper" onclick="insertItem('Paper', 'images/paper.jpg', 'Recyclable paper items.')">Paper</div>
+    <h2>CycleVend</h2>
+    <p>Reverse Vending Machine App</p>
+    <div class="container" id="container">
+      <div class="slot" id="plastic" onclick="insertItem()">Plastic</div>
+      <div class="slot" id="glass">Glass</div>
+      <div class="slot" id="metal">Metal</div>
+      <div class="slot" id="paper">Paper</div>
+  </div>
+
+
+
     <div id="output"></div>
     <button id="reset-button" onclick="resetMachine()">Reset</button>
     <a href="#" id="view-cart" class="hidden" onclick="showCart()">View Cart</a>
