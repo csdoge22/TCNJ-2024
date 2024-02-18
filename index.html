@@ -7,14 +7,21 @@
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-<a href="loading.html"> Press me bitch</a>
+<a href="loading.html"> </a>
 
 <div class="container">
   <div class="vending-machine">
-    <h2>CycleVend</h2> 
+    <h2 id="logo">CycleVend</h2> 
     <p id="uni-text">@RiderUniversity</p>
     <p>Reverse Vending Machine App</p>
-   
+    <p><i>"Making recycling cool again"</i></p>
+
+<div class="instructions">
+
+    <p>Step 1 : Select Quantity Of Item Desired To Recycle.</p>
+   <p>Step 2 : Click On Item Desired To Recycle. (Select One)</p>
+   <p>Step 3 : Click on Button 'Add To Cart' or 'Reset' To See Results </p>
+</div>
     <select id="selecting">
       <option value="" disabled selected hidden>Select an option</option>
       <option value="ziegler">Ziegler Hall</option>
@@ -26,22 +33,30 @@
       <option value="lincoln">Lincoln Hall</option>
       <option value="wright">Wright Hall</option>
       <option value="switlik">Switlik Hall</option>
-      <option value="ziegler">Olson Hall</option>
-      <option value="ziegler">Longstreet Hall</option>
-      <option value="ziegler">Hank and Bonnie Moore Hall</option>
+      <option value="olson">Olson Hall</option>
+      <option value="longstreet">Longstreet Hall</option>
+      <option value="moore">Hank and Bonnie Moore Hall</option>
       <option value="gee">Gee Hall</option>
+      <option value="other">Other Options</option>
     </select>
+    
     <button onclick="newTest()">Submit</button>
     <p id="displayText"></p>
-<!-- Display the vending machine based on user selection -->
+
+    <!-- Display the vending machine based on user selection -->
+    <div class="slot" id="plastic" onclick="insertItem('Plastic', 'images/pwb.jpg', 'Recyclable plastic items.', 'slot-quantity-plastic')">Plastic Bottle  &<br> Containers</div>
+    <div class="slot" id="glass" onclick="insertItem('Glass', 'images/glass.jpg', 'Recyclable glass items.', 'slot-quantity-glass')">Glass Bottles</div>
+    <div class="slot" id="metal" onclick="insertItem('Metal', 'images/metal.jpg', 'Recyclable metal items.', 'slot-quantity-metal')">Aluminum Can</div>
+    <div class="slot" id="paper" onclick="insertItem('Paper', 'images/paper.jpg', 'Recyclable paper items.', 'slot-quantity-paper')">Paper & Cardboard</div>
+
+    <div class="quantity-selector">
+      <label for="slot-quantity">Quantity:</label>
+      <input type="number" id="slot-quantity" placeholder="Quantity" min="1" value="1">
+    </div>
     
-<div class="slot" id="plastic" onclick="insertItem('Plastic', 'images/pwb.jpg', 'Recyclable plastic items.')">Plastic</div>
-<div class="slot" id="glass" onclick="insertItem('Glass', 'images/glass.jpg', 'Recyclable glass items.')">Glass</div>
-<div class="slot" id="metal" onclick="insertItem('Metal', 'images/metal.jpg', 'Recyclable metal items.')">Metal</div>
-<div class="slot" id="paper" onclick="insertItem('Paper', 'images/paper.jpg', 'Recyclable paper items.')">Paper</div>
-<div id="output"></div>
+    <div id="output"></div>
     <button id="reset-button" onclick="resetMachine()">Reset</button>
-    <a href="#" id="view-cart" class="hidden" onclick="showCart()">View Cart</a>
+    <a href="#" id="view-cart" class="hidden" onclick="showCart()">Go To Cart</a>
   </div>
 
   <div class="cart-container hidden" id="cart-container">
@@ -52,16 +67,13 @@
   </div>
 </div>
 
-
-
 <br><br>
-  <div class="bottom-container">
-    <div class="icon-container">
-      <div>
-        <a href="index.html">
-          <img src="images\basket2-fill.svg" alt="recycle logo"></a>
-          <span>CycleVend</span>
-        
+<div class="bottom-container">
+  <div class="icon-container">
+    <div>
+      <a href="index.html">
+        <img src="images\basket2-fill.svg" alt="recycle logo"></a>
+        <span>CycleVend</span>
       </div>
       <div>
         <button id="cart-button" onclick="showCart()">
@@ -73,16 +85,11 @@
         <a href="about.html">
           <img src="images/if.svg" alt="learn logo"> </a>
           <span>information</span>
-       
       </div>
     </div>
   </div>
   <br>
 
-
-
-
-<script src="script.js"></script>
-
+  <script src="script.js"></script>
 </body>
 </html>

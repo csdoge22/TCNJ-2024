@@ -1,14 +1,10 @@
-function insertItem(item, imageUrl, description) {
+function insertItem(item, imageUrl, description, quantityInputId) {
   // Handle the insertion logic here
-  document.getElementById('output').innerHTML = `Item Inserted: ${item}`;
+  const quantity = document.getElementById(quantityInputId).value;
+  document.getElementById('output').innerHTML = `Item Inserted: ${item} (Quantity: ${quantity})`;
   addDeleteButton(item);
-  addToCart(item, imageUrl, description);
+  addToCart(item, imageUrl, description, quantity);
   showViewCartButton();
-}
-
-function showViewCartButton() {
-  const viewCartButton = document.getElementById('view-cart');
-  viewCartButton.classList.remove('hidden');
 }
 
 function addDeleteButton(item) {
@@ -44,14 +40,27 @@ function removeDeleteButton(item) {
   }
 }
 
-function addToCart(item, imageUrl, description) {
+function removeFromCart(item) {
+  const cartItems = document.getElementById('cart-items');
+  const cartItem = Array.from(cartItems.children).find(itemElement => {
+    return itemElement.querySelector('strong').textContent === item;
+  });
+
+  if (cartItem) {
+    cartItem.remove();
+  }
+
+  checkCartEmpty();
+}
+
+function addToCart(item, imageUrl, description, quantity) {
   const cartItems = document.getElementById('cart-items');
   const cartItem = document.createElement('div');
   cartItem.classList.add('cart-item');
 
   const itemInfo = document.createElement('div');
   const itemName = document.createElement('strong');
-  itemName.textContent = item;
+  itemName.textContent = item + ` (Quantity: ${quantity})`;
   const itemDescription = document.createElement('p');
   itemDescription.textContent = description;
   itemInfo.appendChild(itemName);
@@ -72,19 +81,6 @@ function addToCart(item, imageUrl, description) {
   cartItem.appendChild(itemImage);
   cartItem.appendChild(deleteButton);
   cartItems.appendChild(cartItem);
-}
-
-function removeFromCart(item) {
-  const cartItems = document.getElementById('cart-items');
-  const cartItem = Array.from(cartItems.children).find(itemElement => {
-    return itemElement.querySelector('strong').textContent === item;
-  });
-
-  if (cartItem) {
-    cartItem.remove();
-  }
-
-  checkCartEmpty();
 }
 
 function clearCart() {
@@ -142,19 +138,19 @@ document.addEventListener('DOMContentLoaded', function () {
   const paperSlot = document.getElementById('paper');
 
   plasticSlot.addEventListener('click', function () {
-    insertItem('Plastic', 'images/pwb.jpg', 'Recyclable plastic items.');
+    insertItem('Plastic', 'images/pwb.jpg', 'Recyclable plastic items.', 'slot-quantity');
   });
 
   glassSlot.addEventListener('click', function () {
-    insertItem('Glass', 'images/glass.jpg', 'Recyclable glass items.');
+    insertItem('Glass', 'images/glass.jpg', 'Recyclable glass items.', 'slot-quantity');
   });
 
   metalSlot.addEventListener('click', function () {
-    insertItem('Metal', 'images/metal.jpg', 'Recyclable metal items.');
+    insertItem('Metal', 'images/blankcan.jpg', 'Recyclable Aluminum Cans.', 'slot-quantity');
   });
 
   paperSlot.addEventListener('click', function () {
-    insertItem('Paper', 'images/paper.jpg', 'Recyclable paper items.');
+    insertItem('Paper', 'images/paper.jpg', 'Recyclable paper items.', 'slot-quantity');
   });
 });
 
@@ -170,6 +166,3 @@ function newTest() {
   buttonNew();
 }
 
-function buttonNew() {
-  // Add your buttonNew logic here
-}

@@ -1,0 +1,99 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 20px;
+    background-color: #f4f4f4;
+    color: #333;
+  }
+  
+  header {
+    text-align: center;
+    padding: 20px;
+    background-color: #3498db;
+    color: #fff;
+  }
+  
+  section {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  h2 {
+    color: #3498db;
+  }
+  
+  p {
+    line-height: 1.6;
+    color: #555;
+  }
+  
+  .founder {
+    margin-bottom: 30px;
+  }
+  
+  .app-usage {
+    margin-top: 30px;
+  }
+  
+  ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  ul li {
+    background-color: #3498db;
+    color: #fff;
+    padding: 8px;
+    margin-bottom: 5px;
+    border-radius: 5px;
+  }
+  
+  footer {
+    margin-top: 50px;
+    text-align: center;
+    background-color: #3498db;
+    color: #fff;
+    padding: 10px 0;
+  }
+  
+
+  /*keep these styles for all pages */
+
+  /* bottom container*/
+  .bottom-container {
+    position: fixed; /* Fixed position */
+    text-align: center;
+    bottom: 0;
+    left: 0; /* Ensure the container starts from the left */
+    width: 100%; /* Full width */
+    background-color: white;
+    border: 1px solid whitesmoke;
+    padding: 10px;
+    border-radius: 20px;
+    text-align:center;
+    box-sizing: border-box; /* Include padding and border in total width */
+    z-index: 1000; /* Ensure it's above other elements */
+  }
+  
+
+  .icon-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+  }
+  .icon-container div {
+    text-align: center;
+    width: 30%;
+  }
+
+  .icon-container img {
+    height: 30px; /* Adjust the height of the icons as needed */
+    display: block;
+    margin: 0 auto;
+  }
+
+  #cart-button{
+    color:none;
+    border:none ;
+   background-color: transparent;
+ }

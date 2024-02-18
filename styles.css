@@ -6,7 +6,7 @@ body {
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    background-color: #538691;
+    background-color: #3498db;
     margin-bottom: 70px;
   }
 
@@ -83,7 +83,7 @@ body {
   #view-cart,
   #back-to-machine {
     text-decoration: none;
-    background-color: #3a702f;
+    background-color: #000000;
     color: #fff;
     padding: 10px 20px;
     border: none;
@@ -127,6 +127,9 @@ body {
     margin-right: 10px;
   }
   
+  div.instructions{
+    font-size: 12px;
+  }
   .delete-button-cart {
     position: absolute;
     top: 90%;
@@ -200,5 +203,16 @@ body {
   }
   #buttonIntro{
       margin-top: 80px; /* Adjust the margin as needed */
-      margin-left: -89PX;
+      margin-left: -100px;
+      background-color:black;
+      border-radius: 50px;
+      border: none;
+      color:white;
+
+  }
+  #logo{
+    background-color: #2980b9;
+    border-radius: 40px;
+    color:white;
+    font-family:cursive;
   }
