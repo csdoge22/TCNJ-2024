@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Recycling Vending Machine TCNJ</title>
+  <title>Cycle Vend</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -12,11 +12,17 @@
   <div class="vending-machine">
     <h2>CycleVend</h2>
     <p>Reverse Vending Machine App</p>
+    <select id="selecting" onchange="newTest()">
+      <option value="" disabled selected>Select an option</option> #MAKE THIS LINE A PLACEHOLDER TEXT 
+      <option value="ziegler">Ziegler Hall</option>
+      <option value="gee">Gee Hall</option>
+    </select>
+    
     <div class="container" id="container">
       <div class="slot" id="plastic" onclick="insertItem()">Plastic</div>
-      <div class="slot" id="glass">Glass</div>
-      <div class="slot" id="metal">Metal</div>
-      <div class="slot" id="paper">Paper</div>
+      <div class="slot" id="glass" onclick="insertItem()">Glass</div>
+      <div class="slot" id="metal" onclick="insertItem()">Metal</div>
+      <div class="slot" id="paper" onclick="insertItem()">Paper</div>
   </div>
 
 
