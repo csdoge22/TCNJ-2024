@@ -7,27 +7,39 @@
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+<a href="loading.html"> Press me bitch</a>
 
 <div class="container">
   <div class="vending-machine">
-    <h2>CycleVend</h2>
+    <h2>CycleVend</h2> 
+    <p id="uni-text">@RiderUniversity</p>
     <p>Reverse Vending Machine App</p>
-    <select id="selecting" onchange="newTest()">
-      <option value="" disabled selected>Select an option</option> #MAKE THIS LINE A PLACEHOLDER TEXT 
+   
+    <select id="selecting">
+      <option value="" disabled selected hidden>Select an option</option>
       <option value="ziegler">Ziegler Hall</option>
+      <option value="conover">Conover Hall</option>
+      <option value="hill">Hill Hall</option>
+      <option value="kroner">Kroner Hall</option>
+      <option value="poyda">Poyda Hall</option>
+      <option value="lake">Lake House</option>
+      <option value="lincoln">Lincoln Hall</option>
+      <option value="wright">Wright Hall</option>
+      <option value="switlik">Switlik Hall</option>
+      <option value="ziegler">Olson Hall</option>
+      <option value="ziegler">Longstreet Hall</option>
+      <option value="ziegler">Hank and Bonnie Moore Hall</option>
       <option value="gee">Gee Hall</option>
     </select>
+    <button onclick="newTest()">Submit</button>
+    <p id="displayText"></p>
+<!-- Display the vending machine based on user selection -->
     
-    <div class="container" id="container">
-      <div class="slot" id="plastic" onclick="insertItem()">Plastic</div>
-      <div class="slot" id="glass" onclick="insertItem()">Glass</div>
-      <div class="slot" id="metal" onclick="insertItem()">Metal</div>
-      <div class="slot" id="paper" onclick="insertItem()">Paper</div>
-  </div>
-
-
-
-    <div id="output"></div>
+<div class="slot" id="plastic" onclick="insertItem('Plastic', 'images/pwb.jpg', 'Recyclable plastic items.')">Plastic</div>
+<div class="slot" id="glass" onclick="insertItem('Glass', 'images/glass.jpg', 'Recyclable glass items.')">Glass</div>
+<div class="slot" id="metal" onclick="insertItem('Metal', 'images/metal.jpg', 'Recyclable metal items.')">Metal</div>
+<div class="slot" id="paper" onclick="insertItem('Paper', 'images/paper.jpg', 'Recyclable paper items.')">Paper</div>
+<div id="output"></div>
     <button id="reset-button" onclick="resetMachine()">Reset</button>
     <a href="#" id="view-cart" class="hidden" onclick="showCart()">View Cart</a>
   </div>
@@ -39,6 +51,36 @@
     <a href="#" id="back-to-machine" onclick="hideCart()">Back to Vending Machine</a>
   </div>
 </div>
+
+
+
+<br><br>
+  <div class="bottom-container">
+    <div class="icon-container">
+      <div>
+        <a href="index.html">
+          <img src="images\basket2-fill.svg" alt="recycle logo"></a>
+          <span>CycleVend</span>
+        
+      </div>
+      <div>
+        <button id="cart-button" onclick="showCart()">
+          <img src="images\cart (1).svg" alt="ret bins logo">
+          <span>Cart</span>
+        </button>
+      </div>
+      <div>
+        <a href="about.html">
+          <img src="images/if.svg" alt="learn logo"> </a>
+          <span>information</span>
+       
+      </div>
+    </div>
+  </div>
+  <br>
+
+
+
 
 <script src="script.js"></script>
 

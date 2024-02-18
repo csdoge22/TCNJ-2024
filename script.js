@@ -1,7 +1,7 @@
 function insertItem(item, imageUrl, description) {
   // Handle the insertion logic here
   document.getElementById('output').innerHTML = `Item Inserted: ${item}`;
-  addDeleteButton(item, imageUrl, description);
+  addDeleteButton(item);
   addToCart(item, imageUrl, description);
   showViewCartButton();
 }
@@ -11,10 +11,10 @@ function showViewCartButton() {
   viewCartButton.classList.remove('hidden');
 }
 
-function addDeleteButton(item, imageUrl, description) {
+function addDeleteButton(item) {
   const slotId = item.toLowerCase();
   const slotElement = document.getElementById(slotId);
-  
+
   if (!slotElement.querySelector('.delete-button')) {
     const deleteButton = document.createElement('button');
     deleteButton.classList.add('delete-button');
@@ -96,7 +96,7 @@ function clearCart() {
 function checkCartEmpty() {
   const viewCartButton = document.getElementById('view-cart');
   const cartItems = document.getElementById('cart-items');
-  
+
   if (cartItems.children.length === 0) {
     viewCartButton.classList.add('hidden');
   }
@@ -135,36 +135,41 @@ function hideCart() {
   cartContainer.classList.add('hidden');
 }
 
-// Your JavaScript code goes here
-
-function insertItem(name, imageSrc, description) {
-  console.log(`Inserting item: ${name}`);
-  // Add your logic for inserting items here
-}
-
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
   const plasticSlot = document.getElementById('plastic');
   const glassSlot = document.getElementById('glass');
   const metalSlot = document.getElementById('metal');
   const paperSlot = document.getElementById('paper');
 
-  plasticSlot.addEventListener('click', function() {
+  plasticSlot.addEventListener('click', function () {
     insertItem('Plastic', 'images/pwb.jpg', 'Recyclable plastic items.');
   });
 
-  glassSlot.addEventListener('click', function() {
+  glassSlot.addEventListener('click', function () {
     insertItem('Glass', 'images/glass.jpg', 'Recyclable glass items.');
   });
 
-  metalSlot.addEventListener('click', function() {
+  metalSlot.addEventListener('click', function () {
     insertItem('Metal', 'images/metal.jpg', 'Recyclable metal items.');
   });
 
-  paperSlot.addEventListener('click', function() {
+  paperSlot.addEventListener('click', function () {
     insertItem('Paper', 'images/paper.jpg', 'Recyclable paper items.');
   });
 });
 
-function insertItem(){
-  window.location.assign('https://www.example.com');
+function newTest() {
+  // Get the select element
+  var selectElement = document.getElementById('selecting');
+
+  // Get the selected option
+  var selectedOption = selectElement.options[selectElement.selectedIndex].text;
+
+  // Display the selected text
+  document.getElementById('displayText').innerText = 'Selected: ' + selectedOption;
+  buttonNew();
+}
+
+function buttonNew() {
+  // Add your buttonNew logic here
 }
