@@ -138,19 +138,19 @@ document.addEventListener('DOMContentLoaded', function () {
   const paperSlot = document.getElementById('paper');
 
   plasticSlot.addEventListener('click', function () {
-    insertItem('Plastic', 'images/pwb.jpg', 'Recyclable plastic items.', 'slot-quantity');
+    insertItem('Plastic', 'images/pwb.jpg', 'Plastic Containers.', 'slot-quantity');
   });
 
   glassSlot.addEventListener('click', function () {
-    insertItem('Glass', 'images/glass.jpg', 'Recyclable glass items.', 'slot-quantity');
+    insertItem('Glass', 'images/gb.jpg', 'Glass Bottles.', 'slot-quantity');
   });
 
   metalSlot.addEventListener('click', function () {
-    insertItem('Metal', 'images/blankcan.jpg', 'Recyclable Aluminum Cans.', 'slot-quantity');
+    insertItem('Metal', 'images/blankcan.jpg', 'Aluminum Cans.', 'slot-quantity');
   });
 
   paperSlot.addEventListener('click', function () {
-    insertItem('Paper', 'images/CB.jpg', 'Recyclable paper items.', 'slot-quantity');
+    insertItem('Paper', 'images/CB.jpg', 'Cardboard.', 'slot-quantity');
   });
 });
 
