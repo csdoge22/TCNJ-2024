@@ -150,7 +150,7 @@ document.addEventListener('DOMContentLoaded', function () {
   });
 
   paperSlot.addEventListener('click', function () {
-    insertItem('Paper', 'images/paper.jpg', 'Recyclable paper items.', 'slot-quantity');
+    insertItem('Paper', 'images/CB.jpg', 'Recyclable paper items.', 'slot-quantity');
   });
 });
 
@@ -166,3 +166,9 @@ function newTest() {
   buttonNew();
 }
 
+function storeState() {
+
+  window.cartState = 0;
+  localStorage.setItem(key, value);
+  let value = localStorage.getItem(key);  
+}
