@@ -187,7 +187,11 @@ body {
     display: block;
     margin: 0 auto;
   }
- 
+ #log{
+  color: white;
+  height: 30px;
+  width:50px;
+ }
 
 
 
