@@ -10,6 +10,7 @@
 <a href="loading.html"></a>
 
 <div class="container">
+  <!-- Title and Header -->
   <div class="vending-machine">
     <h2 id="logo">CycleVend</h2> 
     <p id="uni-text">@RiderUniversity</p>
@@ -17,11 +18,11 @@
     <p><i>"Making recycling cool again"</i></p>
 
 <div class="instructions">
-
     <p>Step 1 : Select Quantity Of Item Desired To Recycle.</p>
-   <p>Step 2 : Click On Item Desired To Recycle. (Select One)</p>
-   <p>Step 3 : Click on Button 'Add To Cart' or 'Reset' To See Results </p>
+    <p>Step 2 : Click On Item Desired To Recycle. (Select One)</p>
+    <p>Step 3 : Click on Button 'Add To Cart' or 'Reset' To See Results </p>
 </div>
+    <!-- A catalog of halls in Rider University -->
     <select id="selecting">
       <option value="" disabled selected hidden>Select an option</option>
       <option value="ziegler">Ziegler Hall</option>
@@ -40,6 +41,7 @@
       <option value="other">Other Options</option>
     </select>
     
+    <!-- Button utilizes events to display selected hall (managed using JavaScript) -->
     <button onclick="newTest()">Submit</button>
     <p id="displayText"></p>
 
